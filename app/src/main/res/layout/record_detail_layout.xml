@@ -141,33 +141,35 @@
             android:layout_marginBottom="@dimen/dp5"
             android:visibility="gone">
 
-            <!-- 左列分界线：30%, 35% 位置 -->
+            <!-- 左列分界线：33%, 33.5% 位置 -->
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/rdl_guideline_left1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.3" />
+                app:layout_constraintGuide_percent="0.33" />
+
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/rdl_guideline_left2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.35" />
+                app:layout_constraintGuide_percent="0.335" />
 
-            <!-- 右列分界线：65%, 70% 位置 -->
+            <!-- 右列分界线：66.5%, 67% 位置 -->
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/rdl_guideline_right1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.65" />
+                app:layout_constraintGuide_percent="0.665" />
+
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/rdl_guideline_right2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.7" />
+                app:layout_constraintGuide_percent="0.67" />
 
             <!-- 水平中线：50% 位置 -->
             <androidx.constraintlayout.widget.Guideline
@@ -184,11 +186,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp20"
                 android:layout_marginEnd="@dimen/dp5"
+                android:background="@drawable/square_empty"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="@id/rdl_guideline_right1"
                 app:layout_constraintStart_toStartOf="@id/rdl_guideline_left2"
-                app:layout_constraintTop_toBottomOf="@id/rdl_guideline_horizontal_center"
-                android:background="@drawable/square_empty">
+                app:layout_constraintTop_toBottomOf="@id/rdl_guideline_horizontal_center">
 
                 <include layout="@layout/panel_player2" />
             </LinearLayout>
@@ -199,12 +201,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp5"
+                android:background="@drawable/square_empty"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/rdl_guideline_right2"
-                app:layout_constraintTop_toTopOf="parent"
-                android:background="@drawable/square_empty">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <include layout="@layout/panel_player2" />
             </LinearLayout>
@@ -214,13 +216,13 @@
                 android:id="@+id/rdl_ll_alt_player2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toTopOf="@id/rdl_guideline_horizontal_center"
-                app:layout_constraintStart_toStartOf="@id/rdl_guideline_left2"
-                app:layout_constraintEnd_toEndOf="@id/rdl_guideline_right1"
-                android:layout_marginBottom="@dimen/dp20"
                 android:layout_marginEnd="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp20"
+                android:background="@drawable/square_empty"
                 android:orientation="vertical"
-                android:background="@drawable/square_empty">
+                app:layout_constraintBottom_toTopOf="@id/rdl_guideline_horizontal_center"
+                app:layout_constraintEnd_toEndOf="@id/rdl_guideline_right1"
+                app:layout_constraintStart_toStartOf="@id/rdl_guideline_left2">
 
                 <include layout="@layout/panel_player2" />
             </LinearLayout>
@@ -231,12 +233,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/rdl_guideline_left1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/square_empty"
                 android:orientation="vertical"
-                android:background="@drawable/square_empty">
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/rdl_guideline_left1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
                 <include layout="@layout/panel_player2" />
             </LinearLayout>
 
@@ -245,9 +248,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp5"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@id/rdl_guideline_left2"
                 app:layout_constraintEnd_toEndOf="@id/rdl_guideline_right1"
-                app:layout_constraintTop_toTopOf="parent" >
+                app:layout_constraintStart_toStartOf="@id/rdl_guideline_left2"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageButton
                     android:id="@+id/rdl_ib_center"
@@ -258,9 +261,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/dp28"
+                    android:layout_centerInParent="true"
                     android:layout_marginEnd="@dimen/dp5"
                     android:gravity="center"
-                    android:layout_centerInParent="true"
                     android:text="判罚"
                     android:textColor="@color/text_2"
                     android:textSize="@dimen/dp16" />
